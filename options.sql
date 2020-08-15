@@ -9,7 +9,7 @@ CREATE TABLE `options` (
   KEY `idxOT` (`option_type`),
   KEY `idxON` (`option_name`),
   KEY `idxOV` (`option_value`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB;
 
 
 CREATE FUNCTION option_add(
@@ -83,7 +83,7 @@ BEGIN
 
 END
 
-CREATE FUNCTION `option_get_value`(ido int) RETURNS varchar(255) CHARSET utf8mb4
+CREATE FUNCTION `option_get_value`(ido int) RETURNS varchar(255)
 BEGIN
   declare res VARCHAR(255) default '';
 
